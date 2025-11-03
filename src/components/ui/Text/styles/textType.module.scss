@@ -1,5 +1,14 @@
 @use "@/styles/mixins/fonts.module.scss" as font;
 
+
 .h1 {
   @include font.H1()
+}
+
+.text2 {
+  @include font.text2();
+}
+
+.text4 {
+  @include font.text4()
 }
