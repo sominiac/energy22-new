@@ -32,3 +32,17 @@
     size: 24px;
   };
 }
+
+@mixin text2($family: ('OpenSansRegular', sans-serif)) {
+  font: {
+    family: $family;
+    size: 20px;
+  }
+}
+
+@mixin text4($family: ('OpenSansRegular', sans-serif)) {
+  font: {
+    family: $family;
+    size: 16px;
+  };
+}
