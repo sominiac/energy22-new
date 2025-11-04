@@ -1,6 +1,14 @@
 import { type ReactNode } from "react";
 
-export type TTextElements = "span" | "p" | "h1";
+export type TTextElements =
+  | "span"
+  | "p"
+  | "h1"
+  | "h2"
+  | "h3"
+  | "h4"
+  | "h5"
+  | "h6";
 export type TComponentType =
   | "h1"
   | "h2"

@@ -5,6 +5,24 @@
   @include font.H1()
 }
 
+.h2 {
+  @include font.H2("NunitoSans");
+  font-weight: 600;
+}
+
+.h3 {
+  @include font.H3("NunitoSans");
+}
+
+.h4 {
+  @include font.H4();
+  font-weight: 600;
+}
+
+.text1 {
+  @include font.text1();
+}
+
 .text2 {
   @include font.text2();
 }

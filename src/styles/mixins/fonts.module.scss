@@ -1,46 +1,46 @@
-@mixin H1($family: ('OpenSansLight', sans-serif)) {
+@mixin H1($family: ('OpenSansLight')) {
   font: {
     family: $family;
     size: 64px;
   };
 }
 
-@mixin H2($family: ('OpenSansSemiBold', sans-serif)) {
+@mixin H2($family: ('OpenSansSemiBold')) {
   font: {
     family: $family;
     size: 40px;
   };
 }
 
-@mixin H3($family: ('OpenSansSemiBold', sans-serif)) {
+@mixin H3($family: ('OpenSansSemiBold')) {
   font: {
     family: $family;
     size: 32px;
   };
 }
 
-@mixin H4($family: ('OpenSansSemiBold', sans-serif)) {
+@mixin H4($family: ('OpenSansSemiBold')) {
   font: {
     family: $family;
     size: 24px;
   };
 }
 
-@mixin H4($family: ('OpenSansSemiBold', sans-serif)) {
+@mixin text1($family: ('OpenSansRegular')) {
   font: {
     family: $family;
     size: 24px;
-  };
+  }
 }
 
-@mixin text2($family: ('OpenSansRegular', sans-serif)) {
+@mixin text2($family: ('OpenSansRegular')) {
   font: {
     family: $family;
     size: 20px;
   }
 }
 
-@mixin text4($family: ('OpenSansRegular', sans-serif)) {
+@mixin text4($family: ('OpenSansRegular')) {
   font: {
     family: $family;
     size: 16px;

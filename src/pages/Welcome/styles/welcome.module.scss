@@ -1,0 +1,53 @@
+.welcome {
+  position: relative;
+
+  &:before {
+    content: url("@/assets/images/welcome-left-light.png");
+    position: absolute;
+    top: -200px;
+    right: 326px;
+  }
+
+  &:after {
+    content: url("@/assets/images/welcome-right-light.png");
+    position: absolute;
+    top: -200px;
+    left: 326px;
+    z-index: -1;
+  }
+
+  &__inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__wrapper {
+    width: 50%;
+    padding: 96px 0 96px 81px;
+  }
+
+  &__title {
+    line-height: 120%;
+    letter-spacing: 0.2px;
+  }
+
+  &__description {
+    padding: 56px 0 119px;
+    line-height: 150%;
+    letter-spacing: 0.2px;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__phone, &__infoDescription {
+    line-height: 150%;
+    letter-spacing: 0.2px;
+  }
+}
