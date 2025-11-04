@@ -1,0 +1,46 @@
+.about {
+  margin-top: 144px;
+
+  &__inner {
+    padding: 96px 113px;
+    position: relative;
+  }
+
+  &__inner:before {
+    content: url("@assets/images/about-bg3.png");
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+  &__innerImage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 310px 2fr 310px;
+    grid-row-gap: 56px;
+    list-style: none;
+  }
+
+  &__listLeftItem {
+    grid-column-start: 1;
+  }
+
+  &__listRightItem {
+    grid-column-start: 3;
+  }
+
+  &__itemText {
+    line-height: 150%;
+    letter-spacing: -0.9px;
+  }
+}
