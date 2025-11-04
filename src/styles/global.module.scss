@@ -8,38 +8,10 @@
 
 @font-face {
   font: {
-    family: 'OpenSansLight';
-    weight: 300;
+    family: 'OpenSans';
     style: normal;
   }
-  src: url('@/assets/fonts/OpenSans/OpenSans-Light.ttf') format('truetype');
-}
-
-@font-face {
-  font: {
-    family: 'OpenSansRegular';
-    weight: 400;
-    style: normal;
-  }
-  src: url('@/assets/fonts/OpenSans/OpenSans-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font: {
-    family: 'OpenSansSemiBold';
-    weight: 600;
-    style: normal;
-  }
-  src: url('@/assets/fonts/OpenSans/OpenSans-SemiBold.ttf') format('truetype');
-}
-
-@font-face {
-  font: {
-    family: 'OpenSansBold';
-    weight: 700;
-    style: normal;
-  }
-  src: url('@/assets/fonts/OpenSans/OpenSans-Bold.ttf') format('truetype');
+  src: url('@/assets/fonts/OpenSans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
 }
 
 @font-face {
@@ -51,7 +23,8 @@
 }
 
 body {
-  width: 100vw;
+  max-width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
   background-color: color.$DARK_BLUE;
 }
