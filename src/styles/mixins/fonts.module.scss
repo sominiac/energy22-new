@@ -53,3 +53,11 @@
     size: 16px;
   };
 }
+
+@mixin text5($family: ('OpenSans')) {
+  font: {
+    family: $family;
+    weight: 700;
+    size: 16px;
+  };
+}
