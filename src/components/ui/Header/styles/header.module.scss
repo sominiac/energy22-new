@@ -6,6 +6,7 @@ $MARGIN_TOP: 24px;
   align-items: center;
   margin: $MARGIN_TOP 0 56px;
   position: relative;
+  z-index: 2;
 
   &:before {
     content: url("@/assets/images/left-side-light.png");
