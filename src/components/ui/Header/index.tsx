@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import Text from "@components/ui/Text";
 import Tabs, { type TTabComponentProps } from "@components/ui/Tabs";
 import { WORK_TIME } from "@/constants/info.ts";
@@ -15,9 +16,12 @@ const NAV_LIST: ITab[] = [
   { id: "7", text: "Вопрос-ответ" },
 ];
 
-const NavItem = ({ text }: TTabComponentProps) => {
+const NavItem = ({ className, text }: TTabComponentProps) => {
   return (
-    <Text className={styles.header__navItem} componentType="text2">
+    <Text
+      className={clsx(styles.header__navItem, className)}
+      componentType="text2"
+    >
       {text}
     </Text>
   );
