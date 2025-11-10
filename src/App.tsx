@@ -4,6 +4,7 @@ import Welcome from "@/pages/Welcome";
 import About from "@/pages/About";
 import Tags from "@components/ui/Tags";
 import styles from "./styles/app.module.scss";
+import Mission from "@/pages/Mission";
 
 const App = () => {
   return (
@@ -14,6 +15,9 @@ const App = () => {
         <About />
       </Container>
       <Tags className={styles.tagsWrapper} />
+      <Container>
+        <Mission />
+      </Container>
     </>
   );
 };
