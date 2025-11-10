@@ -6,6 +6,7 @@ import styles from "./styles/section.module.scss";
 type TSectionProps = {
   title?: string;
   hasBorder?: boolean;
+  hasBlur?: boolean;
   classNameSection?: string;
   classNameInner?: string;
 };
@@ -13,6 +14,7 @@ type TSectionProps = {
 const Section: FC<PropsWithChildren<TSectionProps>> = ({
   title,
   hasBorder = true,
+  hasBlur = true,
   classNameSection,
   classNameInner,
   children,
@@ -33,6 +35,7 @@ const Section: FC<PropsWithChildren<TSectionProps>> = ({
         className={clsx(
           styles.section__inner,
           hasBorder && styles.section__innerWithBorder,
+          hasBlur && styles.section__innerWithBlur,
           classNameInner,
         )}
       >
