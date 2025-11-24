@@ -5,6 +5,7 @@ import About from "@/pages/About";
 import Tags from "@components/ui/Tags";
 import styles from "./styles/app.module.scss";
 import Mission from "@/pages/Mission";
+import UpButton from "@components/ui/UpButton";
 
 const App = () => {
   return (
@@ -18,6 +19,9 @@ const App = () => {
       <Container>
         <Mission />
       </Container>
+      <div className={styles.arrowUpWrapper}>
+        <UpButton />
+      </div>
     </>
   );
 };

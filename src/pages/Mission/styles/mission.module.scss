@@ -3,6 +3,7 @@
 
 .mission {
   position: relative;
+  z-index: 0;
 
   &:before {
     content: url("@assets/images/mission-bg.png");

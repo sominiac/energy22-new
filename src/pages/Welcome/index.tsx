@@ -33,7 +33,7 @@ const Welcome = () => {
             component="h4"
             componentType="h4"
           >
-            8 996 705-70-21
+            0 000 000-00-00
           </Text>
         </div>
         <Text className={styles.welcome__infoDescription} componentType="text4">
