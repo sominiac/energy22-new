@@ -3,6 +3,8 @@
 
 .section {
   width: 100%;
+  position: relative;
+  z-index: 1;
 
   &__title {
     font-weight: 400;

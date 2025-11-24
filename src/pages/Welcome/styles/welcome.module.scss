@@ -1,3 +1,5 @@
+@use "@/styles/variables/colors.module.scss" as variables;
+
 .welcome {
   position: relative;
   z-index: 1;
@@ -38,6 +40,7 @@
     padding: 56px 0 119px;
     line-height: 150%;
     letter-spacing: -0.9px;
+    color: variables.$GRAY_TEXT;
   }
 
   &__info {
@@ -50,5 +53,9 @@
   &__phone, &__infoDescription {
     line-height: 150%;
     letter-spacing: -0.9px;
+  }
+
+  &__infoDescription {
+    color: variables.$GRAY_TEXT;
   }
 }

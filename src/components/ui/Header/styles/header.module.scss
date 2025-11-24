@@ -1,3 +1,5 @@
+@use "@/styles/variables/colors.module.scss" as variables;
+
 $MARGIN_TOP: 24px;
 
 .header {
@@ -37,5 +39,6 @@ $MARGIN_TOP: 24px;
 
   &__navItem {
     line-height: 150%;
+    color: variables.$GRAY_TEXT;
   }
 }

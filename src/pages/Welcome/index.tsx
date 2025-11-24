@@ -36,7 +36,9 @@ const Welcome = () => {
             8 996 705-70-21
           </Text>
         </div>
-        <Text componentType="text4">Или пишите на WhatsApp </Text>
+        <Text className={styles.welcome__infoDescription} componentType="text4">
+          Или пишите на WhatsApp{" "}
+        </Text>
       </div>
       <img src={WelcomeBgImage} alt="a man in a special suit" />
     </Section>
