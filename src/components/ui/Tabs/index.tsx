@@ -1,6 +1,9 @@
 import clsx from "clsx";
+import TabItem from "@components/ui/Tabs/components/TabItem";
+
 import type { ElementType } from "react";
 import type { ITab } from "@/interfaces/Tabs/tabs.ts";
+
 import styles from "./styles/tabs.module.scss";
 
 export type TTabComponentProps = Omit<ITab, "id"> & {
@@ -10,10 +13,14 @@ export type TTabComponentProps = Omit<ITab, "id"> & {
 type TTabsProps = {
   tabsList: ITab[];
   wrapperComputedStyle?: string;
-  TabComponent: ElementType<TTabComponentProps>;
+  TabComponent?: ElementType<TTabComponentProps>;
 };
 
-const Tabs = ({ tabsList, wrapperComputedStyle, TabComponent }: TTabsProps) => {
+const Tabs = ({
+  tabsList,
+  wrapperComputedStyle,
+  TabComponent = TabItem,
+}: TTabsProps) => {
   return (
     <nav className={clsx(styles.tabs, wrapperComputedStyle)}>
       {tabsList.map(({ id, text, isActive }) => (
