@@ -1,0 +1,6 @@
+@use "@/styles/variables/colors.module.scss" as variables;
+
+.tabItem {
+  line-height: 150%;
+  color: variables.$GRAY_TEXT;
+}
