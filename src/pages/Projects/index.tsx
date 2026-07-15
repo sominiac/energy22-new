@@ -12,7 +12,7 @@ import styles from "./styles/projects.module.scss";
 const Projects = () => {
   return (
     <Section
-      title="Готовые проекты"
+      title="Галерея"
       classNameSection={styles.projects}
       classNameInner={styles.projects__inner}
     >
