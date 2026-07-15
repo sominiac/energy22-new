@@ -3,10 +3,11 @@ import Header from "./components/ui/Header";
 import Welcome from "@/pages/Welcome";
 import About from "@/pages/About";
 import Tags from "@components/ui/Tags";
-import styles from "./styles/app.module.scss";
 import Mission from "@/pages/Mission";
 import UpButton from "@components/ui/UpButton";
 import Projects from "@/pages/Projects";
+import Services from "@/pages/Services";
+import styles from "./styles/app.module.scss";
 
 const App = () => {
   return (
@@ -25,6 +26,9 @@ const App = () => {
       </div>
       <Container>
         <Projects />
+      </Container>
+      <Container>
+        <Services />
       </Container>
     </>
   );

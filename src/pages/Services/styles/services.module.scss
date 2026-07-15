@@ -1,0 +1,48 @@
+@use "@/styles/variables/colors.module.scss" as color;
+
+.services {
+  //@TODO добавить глобальную переменную для одинакового секционного отступа
+  margin-top: 144px;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: url("@assets/images/services-bg.png");
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  &__inner {
+    //@TODO добавить глобальную переменную для одинакового секционного отступа
+    padding: 96px 81px;
+    backdrop-filter: blur(50px);
+  }
+
+  &__header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px 32px;
+    margin-top: 56px;
+    list-style: none;
+  }
+
+  &__listItem {
+    padding: 24px 16px;
+    background-color: color.$LIGHT_BLUE_TEXT;
+    border-radius: 16px;
+  }
+
+  &__itemText {
+    line-height: 150%;
+    letter-spacing: -2.2%;
+  }
+}
