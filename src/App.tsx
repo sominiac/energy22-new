@@ -7,6 +7,8 @@ import Mission from "@/pages/Mission";
 import UpButton from "@components/ui/UpButton";
 import Projects from "@/pages/Projects";
 import Services from "@/pages/Services";
+import Advantages from "@/pages/Advantages";
+
 import styles from "./styles/app.module.scss";
 
 const App = () => {
@@ -29,6 +31,9 @@ const App = () => {
       </Container>
       <Container>
         <Services />
+      </Container>
+      <Container>
+        <Advantages />
       </Container>
     </>
   );
