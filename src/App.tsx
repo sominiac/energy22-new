@@ -11,6 +11,7 @@ import Advantages from "@/pages/Advantages";
 import Stages from "@/pages/Stages";
 
 import styles from "./styles/app.module.scss";
+import Info from "@/pages/Info";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
         <Services />
         <Advantages />
         <Stages />
+        <Info />
       </Container>
     </>
   );
