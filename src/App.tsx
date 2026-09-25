@@ -8,6 +8,7 @@ import UpButton from "@components/ui/UpButton";
 import Projects from "@/pages/Projects";
 import Services from "@/pages/Services";
 import Advantages from "@/pages/Advantages";
+import Stages from "@/pages/Stages";
 
 import styles from "./styles/app.module.scss";
 
@@ -28,12 +29,9 @@ const App = () => {
       </div>
       <Container>
         <Projects />
-      </Container>
-      <Container>
         <Services />
-      </Container>
-      <Container>
         <Advantages />
+        <Stages />
       </Container>
     </>
   );
