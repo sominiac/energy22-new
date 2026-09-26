@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Section from "@components/layout/Section";
 import QuestionItem from "./components/QuestionItem";
 
