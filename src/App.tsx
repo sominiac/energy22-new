@@ -11,6 +11,7 @@ import Advantages from "@/pages/Advantages";
 import Stages from "@/pages/Stages";
 import Info from "@/pages/Info";
 import FAQ from "@/pages/FAQ";
+import SupFooter from "@/pages/SupFooter";
 
 import styles from "./styles/app.module.scss";
 
@@ -37,6 +38,7 @@ const App = () => {
         <Info />
         <FAQ />
       </Container>
+      <SupFooter />
     </>
   );
 };
