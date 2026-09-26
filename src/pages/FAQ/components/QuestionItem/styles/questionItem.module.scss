@@ -6,6 +6,7 @@
     justify-content: space-between;
     align-items: center;
     border: 0.6px solid colors.$GRAY_BORDER;
+    backdrop-filter: blur(100px);
     border-radius: 10px;
     padding: 32px;
     cursor: pointer;
@@ -19,7 +20,7 @@
 
   &__description {
     display: flex;
-    background-color: colors.$GRAY_BLUE_TEXT;
+    background-color: rgba(77, 143, 240, .22);
     border-radius: 10px;
     margin-top: 16px;
     padding: 32px;
