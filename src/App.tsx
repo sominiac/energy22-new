@@ -9,9 +9,10 @@ import Projects from "@/pages/Projects";
 import Services from "@/pages/Services";
 import Advantages from "@/pages/Advantages";
 import Stages from "@/pages/Stages";
+import Info from "@/pages/Info";
+import FAQ from "@/pages/FAQ";
 
 import styles from "./styles/app.module.scss";
-import Info from "@/pages/Info";
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
         <Advantages />
         <Stages />
         <Info />
+        <FAQ />
       </Container>
     </>
   );
