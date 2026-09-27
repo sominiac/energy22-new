@@ -13,19 +13,21 @@ export type TTabComponentProps = Omit<ITab, "id"> & {
 type TTabsProps = {
   tabsList: ITab[];
   wrapperComputedStyle?: string;
+  wrapperItemStyle?: string;
   TabComponent?: ElementType<TTabComponentProps>;
 };
 
 const Tabs = ({
   tabsList,
   wrapperComputedStyle,
+  wrapperItemStyle,
   TabComponent = TabItem,
 }: TTabsProps) => {
   return (
     <nav className={clsx(styles.tabs, wrapperComputedStyle)}>
       {tabsList.map(({ id, text, isActive }) => (
         <TabComponent
-          className={styles.tabs__item}
+          className={clsx(styles.tabs__item, wrapperItemStyle)}
           key={id}
           text={text}
           isActive={isActive}
