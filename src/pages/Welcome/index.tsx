@@ -1,6 +1,6 @@
 import Text from "@components/ui/Text";
 import Section from "@components/layout/Section";
-import PhoneIcon from "@assets/images/phone.png";
+import Phone from "@components/ui/Phone";
 import WelcomeBgImage from "@assets/images/welcome-bg.png";
 import styles from "./styles/welcome.module.scss";
 
@@ -26,19 +26,10 @@ const Welcome = () => {
           Электромонтажные работы любой сложности: от простых решений до
           масштабных проектов!
         </Text>
-        <div className={styles.welcome__info}>
-          <img src={PhoneIcon} alt="phone icon" />
-          <Text
-            className={styles.welcome__phone}
-            component="h4"
-            componentType="h4"
-          >
-            0 000 000-00-00
-          </Text>
-        </div>
-        <Text className={styles.welcome__infoDescription} componentType="text4">
-          Или пишите на WhatsApp{" "}
-        </Text>
+        <Phone
+          wrappedPhoneTextClass={styles.welcome__phoneText}
+          hasCopy={false}
+        />
       </div>
       <img src={WelcomeBgImage} alt="a man in a special suit" />
     </Section>

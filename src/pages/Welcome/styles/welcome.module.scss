@@ -44,19 +44,7 @@
     color: variables.$GRAY_TEXT;
   }
 
-  &__info {
-    display: flex;
-    align-items: center;
-    column-gap: 16px;
-    margin-bottom: 16px;
-  }
-
-  &__phone, &__infoDescription {
-    line-height: 150%;
-    letter-spacing: -0.9px;
-  }
-
-  &__infoDescription {
-    color: variables.$GRAY_TEXT;
+  &__phoneText {
+    font-weight: 600;
   }
 }
