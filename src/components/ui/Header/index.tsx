@@ -1,21 +1,10 @@
 import Text from "@components/ui/Text";
 import Tabs from "@components/ui/Tabs";
 import { WORK_TIME } from "@/constants/info.ts";
+import { NAV_LIST } from "@assets/data/Tabs/list.ts";
 import LogoImage from "@assets/images/logo.png";
 
-import type { ITab } from "@/interfaces/Tabs/tabs.ts";
-
 import styles from "./styles/header.module.scss";
-
-const NAV_LIST: ITab[] = [
-  { id: "1", text: "Обо мне" },
-  { id: "2", text: "Проекты" },
-  { id: "3", text: "Услуги" },
-  { id: "4", text: "Преимущества" },
-  { id: "5", text: "Этапы работы" },
-  { id: "6", text: "Контакты" },
-  { id: "7", text: "Вопрос-ответ" },
-];
 
 const Header = () => {
   return (
