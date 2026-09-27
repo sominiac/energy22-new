@@ -108,7 +108,10 @@ const Services = () => {
       classNameInner={styles.services__inner}
     >
       <header className={styles.services__header}>
-        <Tabs tabsList={TABS_LIST_MOCK} />
+        <Tabs
+          wrapperItemStyle={styles.services__tabItem}
+          tabsList={TABS_LIST_MOCK}
+        />
       </header>
       {/*@TODO: добавить мемоизацию для отрендареных списков*/}
       <ul className={styles.services__list}>

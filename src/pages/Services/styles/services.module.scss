@@ -27,6 +27,10 @@
     justify-content: center;
   }
 
+  &__tabItem {
+    line-height: 17px;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
