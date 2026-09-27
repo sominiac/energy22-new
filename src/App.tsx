@@ -1,5 +1,5 @@
-import Container from "./components/layout/Container";
-import Header from "./components/ui/Header";
+import Container from "@components/layout/Container";
+import Header from "@components/ui/Header";
 import Welcome from "@/pages/Welcome";
 import About from "@/pages/About";
 import Tags from "@components/ui/Tags";
@@ -12,6 +12,7 @@ import Stages from "@/pages/Stages";
 import Info from "@/pages/Info";
 import FAQ from "@/pages/FAQ";
 import SupFooter from "@/pages/SupFooter";
+import Footer from "@components/ui/Footer";
 
 import styles from "./styles/app.module.scss";
 
@@ -39,6 +40,7 @@ const App = () => {
         <FAQ />
       </Container>
       <SupFooter />
+      <Footer />
     </>
   );
 };
