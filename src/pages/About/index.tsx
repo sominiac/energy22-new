@@ -3,6 +3,7 @@ import Section from "@components/layout/Section";
 import Text from "@components/ui/Text";
 import AboutBGImage from "@assets/images/about-bg.png";
 import AboutBG2Image from "@assets/images/about-bg2.png";
+import { ESections } from "@/constants/sections.ts";
 import styles from "./styles/about.module.scss";
 
 const INFO_LIST = [
@@ -23,6 +24,7 @@ const About = () => {
     <Section
       classNameSection={styles.about}
       classNameInner={styles.about__inner}
+      id={ESections.ABOUT}
       title="Обо мне"
     >
       <ol className={styles.about__list}>

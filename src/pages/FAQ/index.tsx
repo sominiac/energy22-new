@@ -1,6 +1,7 @@
 import Section from "@components/layout/Section";
 import QuestionItem from "./components/QuestionItem";
 
+import { ESections } from "@/constants/sections.ts";
 import type { Question } from "@/interfaces/FAQ/Questions.ts";
 
 import styles from "./styles/faq.module.scss";
@@ -40,6 +41,7 @@ const FAQ = () => {
     <Section
       classNameSection={styles.faq}
       classNameInner={styles.faq__inner}
+      id={ESections.FAQ}
       title="Частые вопросы"
       hasBorder={false}
       hasBlur={false}

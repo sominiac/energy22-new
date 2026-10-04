@@ -8,6 +8,7 @@ import styles from "./styles/tabs.module.scss";
 
 export type TTabComponentProps = Omit<ITab, "id"> & {
   className?: string;
+  isNavItem: boolean;
 };
 
 type TTabsProps = {
@@ -15,6 +16,7 @@ type TTabsProps = {
   wrapperComputedStyle?: string;
   wrapperItemStyle?: string;
   TabComponent?: ElementType<TTabComponentProps>;
+  isNavItem?: boolean;
 };
 
 const Tabs = ({
@@ -22,15 +24,18 @@ const Tabs = ({
   wrapperComputedStyle,
   wrapperItemStyle,
   TabComponent = TabItem,
+  isNavItem = true,
 }: TTabsProps) => {
   return (
     <nav className={clsx(styles.tabs, wrapperComputedStyle)}>
-      {tabsList.map(({ id, text, isActive }) => (
+      {tabsList.map(({ id, text, sectionId, isActive }) => (
         <TabComponent
           className={clsx(styles.tabs__item, wrapperItemStyle)}
           key={id}
           text={text}
+          sectionId={sectionId}
           isActive={isActive}
+          isNavItem={isNavItem}
         />
       ))}
     </nav>

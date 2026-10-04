@@ -13,6 +13,7 @@ import ExperienceImage from "@assets/images/advantages/Experience.png";
 import IconRight from "@assets/images/advantages/icon-right.svg?react";
 import IconLeft from "@assets/images/advantages/icon-left.svg?react";
 
+import { ESections } from "@/constants/sections.ts";
 import type { ISlide } from "@/interfaces/Slider/SliderItem.ts";
 
 import "swiper/css";
@@ -97,6 +98,7 @@ const Advantages = () => {
     <Section
       classNameSection={styles.advantages}
       classNameInner={styles.advantages__inner}
+      id={ESections.ADVANTAGES}
       title="Преимущества"
       hasBlur={false}
       hasBorder={false}

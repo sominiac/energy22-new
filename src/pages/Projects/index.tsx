@@ -1,4 +1,6 @@
 import Section from "@components/layout/Section";
+import { ESections } from "@/constants/sections.ts";
+
 import ListImage1 from "@assets/images/projects/1.png";
 import ListImage2 from "@assets/images/projects/2.png";
 import ListImage3 from "@assets/images/projects/3.png";
@@ -7,14 +9,16 @@ import ListImage5 from "@assets/images/projects/5.png";
 import ListImage6 from "@assets/images/projects/6.png";
 import ListImage7 from "@assets/images/projects/7.png";
 import ListImage8 from "@assets/images/projects/8.png";
+
 import styles from "./styles/projects.module.scss";
 
 const Projects = () => {
   return (
     <Section
-      title="Готовые проекты"
       classNameSection={styles.projects}
       classNameInner={styles.projects__inner}
+      id={ESections.PROJECTS}
+      title="Готовые проекты"
     >
       <ul className={styles.projects__list}>
         <li className={styles.projects__item}>

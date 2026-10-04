@@ -3,6 +3,7 @@ import Tabs from "@components/ui/Tabs";
 import Text from "@components/ui/Text";
 
 import type { ITab } from "@/interfaces/Tabs/tabs.ts";
+import { ESections } from "@/constants/sections.ts";
 
 import styles from "./styles/services.module.scss";
 
@@ -104,13 +105,15 @@ const Services = () => {
   return (
     <Section
       classNameSection={styles.services}
-      title="Услуги"
       classNameInner={styles.services__inner}
+      id={ESections.SERVICES}
+      title="Услуги"
     >
       <header className={styles.services__header}>
         <Tabs
           wrapperItemStyle={styles.services__tabItem}
           tabsList={TABS_LIST_MOCK}
+          isNavItem={false}
         />
       </header>
       {/*@TODO: добавить мемоизацию для отрендареных списков*/}

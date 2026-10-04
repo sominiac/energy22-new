@@ -1,11 +1,12 @@
+import { ESections } from "@/constants/sections.ts";
 import type { ITab } from "@/interfaces/Tabs/tabs.ts";
 
 export const NAV_LIST: ITab[] = [
-  { id: "1", text: "Обо мне" },
-  { id: "2", text: "Проекты" },
-  { id: "3", text: "Услуги" },
-  { id: "4", text: "Преимущества" },
-  { id: "5", text: "Этапы работы" },
-  { id: "6", text: "Контакты" },
-  { id: "7", text: "Вопрос-ответ" },
+  { id: "1", text: "Обо мне", sectionId: ESections.ABOUT },
+  { id: "2", text: "Проекты", sectionId: ESections.PROJECTS },
+  { id: "3", text: "Услуги", sectionId: ESections.SERVICES },
+  { id: "4", text: "Преимущества", sectionId: ESections.ADVANTAGES },
+  { id: "5", text: "Этапы работы", sectionId: ESections.STAGES },
+  { id: "6", text: "Контакты", sectionId: ESections.INFO },
+  { id: "7", text: "Вопрос-ответ", sectionId: ESections.FAQ },
 ];

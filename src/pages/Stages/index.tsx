@@ -1,6 +1,7 @@
 import Section from "@components/layout/Section";
 import Stage from "@/pages/Stages/components/Stage";
 
+import { ESections } from "@/constants/sections.ts";
 import type { IStage } from "@/interfaces/Stages/stages.ts";
 
 import styles from "./styles/stages.module.scss";
@@ -41,6 +42,7 @@ const Stages = () => {
     <Section
       classNameSection={styles.stages}
       classNameInner={styles.stages__inner}
+      id={ESections.STAGES}
       title="Этапы работы"
       hasBlur={false}
       hasBorder={false}

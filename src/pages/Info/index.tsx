@@ -4,11 +4,17 @@ import Phone from "@components/ui/Phone";
 
 import ContentImage from "@/assets/images/info/content.jpg";
 
+import { ESections } from "@/constants/sections.ts";
+
 import styles from "./styles/info.module.scss";
 
 const Info = () => {
   return (
-    <Section classNameSection={styles.info} classNameInner={styles.info__inner}>
+    <Section
+      classNameSection={styles.info}
+      classNameInner={styles.info__inner}
+      id={ESections.INFO}
+    >
       <div className={styles.info__content}>
         <Text className={styles.info__title} componentType="h3">
           Получить консультацию мастера
