@@ -4,6 +4,7 @@ import type { FC, PropsWithChildren } from "react";
 import styles from "./styles/section.module.scss";
 
 type TSectionProps = {
+  id?: string;
   title?: string;
   hasBorder?: boolean;
   hasBlur?: boolean;
@@ -12,6 +13,7 @@ type TSectionProps = {
 };
 
 const Section: FC<PropsWithChildren<TSectionProps>> = ({
+  id,
   title,
   hasBorder = true,
   hasBlur = true,
@@ -20,7 +22,7 @@ const Section: FC<PropsWithChildren<TSectionProps>> = ({
   children,
 }) => {
   return (
-    <section className={clsx(styles.section, classNameSection)}>
+    <section className={clsx(styles.section, classNameSection)} id={id}>
       {title && (
         <Text
           className={styles.section__title}

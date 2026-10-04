@@ -3,6 +3,9 @@
   display: flex;
   justify-content: flex-end;
   padding-right: 119px;
+  position: sticky;
+  bottom: 10px;
+  z-index: 100;
 }
 
 .tagsWrapper {

@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from "react";
+
 import Container from "@components/layout/Container";
 import Header from "@components/ui/Header";
 import Welcome from "@/pages/Welcome";
@@ -17,6 +19,27 @@ import Footer from "@components/ui/Footer";
 import styles from "./styles/app.module.scss";
 
 const App = () => {
+  const [isUpButtonVisible, setIsUpButtonVisible] = useState(false);
+  const arrowUpContainer = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const arrowUpContainerElem = arrowUpContainer?.current;
+    const onScroll = () => {
+      if (arrowUpContainerElem) {
+        if (
+          window.pageYOffset > arrowUpContainerElem.getBoundingClientRect().top
+        ) {
+          setIsUpButtonVisible(true);
+        } else {
+          setIsUpButtonVisible(false);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  });
+
   return (
     <>
       <Container>
@@ -28,19 +51,23 @@ const App = () => {
       <Container>
         <Mission />
       </Container>
-      <div className={styles.arrowUpWrapper}>
-        <UpButton />
+      <div ref={arrowUpContainer}>
+        {isUpButtonVisible && (
+          <div className={styles.arrowUpWrapper}>
+            <UpButton />
+          </div>
+        )}
+        <Container>
+          <Projects />
+          <Services />
+          <Advantages />
+          <Stages />
+          <Info />
+          <FAQ />
+        </Container>
+        <SupFooter />
+        <Footer />
       </div>
-      <Container>
-        <Projects />
-        <Services />
-        <Advantages />
-        <Stages />
-        <Info />
-        <FAQ />
-      </Container>
-      <SupFooter />
-      <Footer />
     </>
   );
 };

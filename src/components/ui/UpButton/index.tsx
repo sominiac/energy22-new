@@ -7,8 +7,15 @@ type TUpButtonProps = {
 };
 
 const UpButton = ({ className }: TUpButtonProps) => {
+  const onScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <button className={clsx(styles.upButton, className)}>
+    <button
+      className={clsx(styles.upButton, className)}
+      onClick={onScrollToTop}
+    >
       <img src={ArrowUpIcon} alt="arrow up" />
     </button>
   );
