@@ -26,6 +26,10 @@
     list-style-type: none;
   }
 
+  &__item {
+    cursor: pointer;
+  }
+
   &__item:nth-child(1) {
     grid-row: span 2;
   }

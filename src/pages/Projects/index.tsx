@@ -1,4 +1,7 @@
+import { type ReactElement, useState } from "react";
+
 import Section from "@components/layout/Section";
+import Modal from "@components/ui/Modal";
 import { ESections } from "@/constants/sections.ts";
 
 import ListImage1 from "@assets/images/projects/1.png";
@@ -12,40 +15,92 @@ import ListImage8 from "@assets/images/projects/8.png";
 
 import styles from "./styles/projects.module.scss";
 
+const PROJECTS_LIST = [
+  {
+    id: "0",
+    image: ListImage1,
+    altText: "image",
+  },
+  {
+    id: "1",
+    image: ListImage2,
+    altText: "image",
+  },
+  {
+    id: "2",
+    image: ListImage3,
+    altText: "image",
+    isVerticalView: true,
+  },
+  {
+    id: "3",
+    image: ListImage4,
+    altText: "image",
+  },
+  {
+    id: "4",
+    image: ListImage5,
+    altText: "image",
+  },
+  {
+    id: "5",
+    image: ListImage6,
+    altText: "image",
+  },
+  {
+    id: "6",
+    image: ListImage7,
+    altText: "image",
+  },
+  {
+    id: "7",
+    image: ListImage8,
+    altText: "image",
+    isVerticalView: true,
+  },
+];
+
 const Projects = () => {
+  const [modalContent, setModalContent] = useState<ReactElement>(<></>);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isVerticalView, setIsVerticalView] = useState(false);
+
+  const onOpen = (content: ReactElement, isVerticalView = false) => {
+    setModalContent(content);
+    setIsVerticalView(isVerticalView);
+    setIsOpen(true);
+  };
+  const onClose = () => {
+    setIsOpen(false);
+  };
+
   return (
     <Section
       classNameSection={styles.projects}
       classNameInner={styles.projects__inner}
       id={ESections.PROJECTS}
-      title="Готовые проекты"
+      title="Галерея"
     >
       <ul className={styles.projects__list}>
-        <li className={styles.projects__item}>
-          <img className={styles.projects__itemImage} src={ListImage1} alt="" />
-        </li>
-        <li className={styles.projects__item}>
-          <img className={styles.projects__itemImage} src={ListImage2} alt="" />
-        </li>
-        <li className={styles.projects__item}>
-          <img className={styles.projects__itemImage} src={ListImage3} alt="" />
-        </li>
-        <li className={styles.projects__item}>
-          <img className={styles.projects__itemImage} src={ListImage4} alt="" />
-        </li>
-        <li className={styles.projects__item}>
-          <img className={styles.projects__itemImage} src={ListImage5} alt="" />
-        </li>
-        <li className={styles.projects__item}>
-          <img className={styles.projects__itemImage} src={ListImage6} alt="" />
-        </li>
-        <li className={styles.projects__item}>
-          <img className={styles.projects__itemImage} src={ListImage7} alt="" />
-        </li>
-        <li className={styles.projects__item}>
-          <img className={styles.projects__itemImage} src={ListImage8} alt="" />
-        </li>
+        {PROJECTS_LIST.map(({ id, image, isVerticalView, altText }) => (
+          <li
+            key={id}
+            className={styles.projects__item}
+            onClick={() =>
+              onOpen(<img src={image} alt={altText} />, isVerticalView)
+            }
+          >
+            <img
+              className={styles.projects__itemImage}
+              src={image}
+              alt={altText}
+            />
+          </li>
+        ))}
       </ul>
+      <Modal isOpen={isOpen} onClose={onClose} isVerticalView={isVerticalView}>
+        {modalContent}
+      </Modal>
     </Section>
   );
 };

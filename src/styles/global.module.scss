@@ -40,6 +40,11 @@ body {
   background-color: color.$DARK_BLUE;
 }
 
+body:has(dialog[open]) {
+  overflow: hidden;
+  padding-right: 15px;
+}
+
 a {
   text-decoration: none;
 }

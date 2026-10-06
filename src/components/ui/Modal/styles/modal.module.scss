@@ -1,0 +1,67 @@
+@use "@/styles/variables/colors.module.scss" as colors;
+
+$dialog-padding: 46px;
+
+.modal {
+  width: calc(483px + $dialog-padding * 2);
+  height: calc(441px + $dialog-padding * 2);
+  overflow: hidden;
+  background: none;
+  border-radius: 20px;
+  border: none;
+  opacity: 0;
+  padding: $dialog-padding;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: scale(0.8) translate(-55%, -50%);
+  z-index: 999;
+  animation: .25s close-dialog;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &::backdrop {
+    background: none;
+    opacity: 1;
+    z-index: -1;
+  }
+
+  &[open] {
+    transform: scale(1) translate(-50%, -50%);
+    opacity: 1;
+    animation: .25s close-dialog reverse;
+  }
+
+  & > img {
+    width: 100%;
+    height: 100%;
+    background-color: colors.$DARK_BLUE;
+    border-radius: inherit;
+  }
+
+  &__close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  &__verticalView {
+    width: calc(430px + $dialog-padding * 2);
+    height: calc(627px + $dialog-padding * 2);
+  }
+}
+
+@keyframes close-dialog {
+  from {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -50%);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8) translate(-55%, -50%);
+  }
+}
