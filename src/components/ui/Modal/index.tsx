@@ -11,6 +11,7 @@ const Modal = ({
   isOpen,
   onClose,
   isVerticalView = false,
+  isNotification = false,
   children,
 }: IModalProps) => {
   const dialogRef = useRef<HTMLDialogElement | null>(null);
@@ -60,11 +61,19 @@ const Modal = ({
       className={clsx(
         styles.modal,
         isVerticalView && styles.modal__verticalView,
+        isNotification && styles.modal__notification,
       )}
       ref={dialogRef}
       onClick={handleDialogClick}
+      data-isnotification={isNotification}
     >
-      <button className={styles.modal__close} onClick={closeDialog}>
+      <button
+        className={clsx(
+          styles.modal__close,
+          isNotification && styles.modal__closeSmall,
+        )}
+        onClick={closeDialog}
+      >
         <CloseIcon />
       </button>
       {children}

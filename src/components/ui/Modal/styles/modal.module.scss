@@ -49,9 +49,37 @@ $dialog-padding: 46px;
     right: 10px;
   }
 
+  &__closeSmall {
+    width: 15px;
+    height: 15px;
+
+    & svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   &__verticalView {
     width: calc(430px + $dialog-padding * 2);
     height: calc(627px + $dialog-padding * 2);
+  }
+
+  &__notification {
+    width: 500px;
+    height: 100px;
+    background-color: colors.$DARK_BLUE;
+    border: 1px solid colors.$SUCCESS_COLOR;
+    padding: 0;
+    top: unset;
+    left: 50%;
+    bottom: 0;
+    transform: scale(0.8) translate(0, -50%);
+    animation: notification-open .25s ease-in;
+  }
+
+  &__notification[open] {
+    transform: scale(1) translate(-50%, -10px);
+    animation: notification-open .25s ease-in;
   }
 }
 
@@ -63,5 +91,16 @@ $dialog-padding: 46px;
   to {
     opacity: 0;
     transform: scale(0.8) translate(-55%, -50%);
+  }
+}
+
+@keyframes notification-open {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translate(-50%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -10px);
   }
 }

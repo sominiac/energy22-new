@@ -15,11 +15,14 @@ import Info from "@/pages/Info";
 import FAQ from "@/pages/FAQ";
 import SupFooter from "@/pages/SupFooter";
 import Footer from "@components/ui/Footer";
+import NotificationModal from "@components/ui/NotificationModal";
+import NotificationProvider from "@/stores/providers/NotificationProvider";
 
 import styles from "./styles/app.module.scss";
 
 const App = () => {
   const [isUpButtonVisible, setIsUpButtonVisible] = useState(false);
+
   const arrowUpContainer = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -42,32 +45,35 @@ const App = () => {
 
   return (
     <>
-      <Container>
-        <Header />
-        <Welcome />
-        <About />
-      </Container>
-      <Tags className={styles.tagsWrapper} />
-      <Container>
-        <Mission />
-      </Container>
-      <div ref={arrowUpContainer}>
-        {isUpButtonVisible && (
-          <div className={styles.arrowUpWrapper}>
-            <UpButton />
-          </div>
-        )}
+      <NotificationProvider>
         <Container>
-          <Projects />
-          <Services />
-          <Advantages />
-          <Stages />
-          <Info />
-          <FAQ />
+          <Header />
+          <Welcome />
+          <About />
         </Container>
-        <SupFooter />
-        <Footer />
-      </div>
+        <Tags className={styles.tagsWrapper} />
+        <Container>
+          <Mission />
+        </Container>
+        <div ref={arrowUpContainer}>
+          {isUpButtonVisible && (
+            <div className={styles.arrowUpWrapper}>
+              <UpButton />
+            </div>
+          )}
+          <Container>
+            <Projects />
+            <Services />
+            <Advantages />
+            <Stages />
+            <Info />
+            <FAQ />
+          </Container>
+          <SupFooter />
+          <Footer />
+        </div>
+        <NotificationModal />
+      </NotificationProvider>
     </>
   );
 };

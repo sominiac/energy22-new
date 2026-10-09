@@ -5,4 +5,5 @@ export interface IModalProps {
   onClose: () => void;
   isOpen: boolean;
   isVerticalView?: boolean;
+  isNotification?: boolean;
 }

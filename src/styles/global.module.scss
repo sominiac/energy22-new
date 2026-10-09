@@ -40,7 +40,7 @@ body {
   background-color: color.$DARK_BLUE;
 }
 
-body:has(dialog[open]) {
+body:has(dialog[open]:not(dialog[data-isnotification="true"])) {
   overflow: hidden;
   padding-right: 15px;
 }
