@@ -6,9 +6,18 @@ import type { IQuestionProps } from "@/interfaces/FAQ/Questions.ts";
 
 import styles from "./styles/questionItem.module.scss";
 
-const QuestionItem = ({ title, description, isActive }: IQuestionProps) => {
+const QuestionItem = ({
+  id,
+  title,
+  description,
+  handlerQuestionClick,
+  isActive,
+}: IQuestionProps) => {
   return (
-    <div className={styles.questionItem}>
+    <div
+      className={styles.questionItem}
+      onClick={() => handlerQuestionClick({ id, title, description, isActive })}
+    >
       <div className={styles.questionItem__title}>
         <Text className={styles.questionItem__titleText} componentType="text2">
           {title}

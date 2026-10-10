@@ -5,4 +5,6 @@ export interface Question {
   isActive: boolean;
 }
 
-export interface IQuestionProps extends Partial<Question> {}
+export interface IQuestionProps extends Question {
+  handlerQuestionClick: (question: Question) => void;
+}

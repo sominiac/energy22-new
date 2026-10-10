@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import Section from "@components/layout/Section";
 import QuestionItem from "./components/QuestionItem";
 
@@ -37,6 +39,18 @@ const CONTENT_LIST: Question[] = [
 ];
 
 const FAQ = () => {
+  const [questions, setQuestions] = useState<Question[]>(CONTENT_LIST);
+
+  const toggleQuestion = (question: Question) => {
+    setQuestions((prevState) => {
+      prevState.splice(Number(question.id), 1, {
+        ...question,
+        isActive: !question.isActive,
+      });
+      return [...prevState];
+    });
+  };
+
   return (
     <Section
       classNameSection={styles.faq}
@@ -46,8 +60,12 @@ const FAQ = () => {
       hasBorder={false}
       hasBlur={false}
     >
-      {CONTENT_LIST.map((question: Question) => (
-        <QuestionItem key={question.id} {...question} />
+      {questions.map((question: Question) => (
+        <QuestionItem
+          key={question.id}
+          handlerQuestionClick={toggleQuestion}
+          {...question}
+        />
       ))}
     </Section>
   );
