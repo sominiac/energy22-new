@@ -1,73 +1,26 @@
-# React + TypeScript + Vite
+## Energy22-new
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Проект содержит в себе вёрстку и логику лендинга Energy22 на библиотеке react. Так же в проект добавлены typescript, prettier и eslint для удобства масштабирования.
+Сам проект Energy22-new не выложен на gh pages, но вся вёрстка и логика перенесена на nextjs и задеплоена [тут](https://github.com/sominiac/energy22-next).
 
-Currently, two official plugins are available:
+Демо билда проекта - https://sominiac.github.io/energy22-next.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+### Версия 0.1.1
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Закончена вёрстка desktop версии сайта.
+- Добавлена основная логика: news line, anchor links, slider and tabs.
 
-## Expanding the ESLint configuration
+### Что предстоит сделать:
+- [ ] Добавить кроссбраузерность.
+- [ ] Добавить адаптивную вёрстку под планшеты и телефоны.
+- [ ] Внести исправления по внутренним `@TODO`.
+- [ ] Исправить видимость лишних слайдов. В секции advantages нужно убрать лишние слайды.
+- [ ] Исправить пагинацию. В секции advantages кастомизировать клики на точки пагинации с учётом дублирующихся слайдов. И исправить активную точку с учётом дублей.
+- [ ] Скроллбар. Добавить обновлённый скроллбар.
+- [ ] Глобально. Добавить реализацию для кнопки "телефон".
+- [ ] Поправить расхождения с pixel-perfect.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Полноценный layout всего дизайна, выгружен из фигмы и лежит в репозитории по пути `src/assets/images/template`
 
-```js
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
-
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+<img src="./src/assets/images/template/Energy-desktop.jpg" title="Design template for pixel perfect" alt="layout image" width="350px" height="1500px" />
